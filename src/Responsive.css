@@ -1,0 +1,81 @@
+/* Mobile Responsiveness for Dhana Durga */
+
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column !important;
+        height: auto !important;
+        overflow-y: auto !important;
+    }
+
+    .sidebar-container {
+        width: 100% !important;
+        height: auto !important;
+        padding: 1rem !important;
+        border-right: none !important;
+        border-bottom: 1px solid var(--border) !important;
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 1500 !important;
+    }
+
+    .sidebar-nav {
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        padding-bottom: 0.5rem !important;
+        gap: 0.5rem !important;
+    }
+
+    .sidebar-nav button {
+        white-space: nowrap !important;
+        padding: 0.5rem 1rem !important;
+        width: auto !important;
+    }
+
+    .sidebar-footer {
+        display: none !important;
+    }
+
+    .content-area {
+        padding: 1rem !important;
+        gap: 1.5rem !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    .header-section {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 1rem !important;
+    }
+
+    .header-actions {
+        width: 100% !important;
+        justify-content: flex-start !important;
+        flex-wrap: wrap !important;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+
+    .view-container {
+        padding: 1rem !important;
+    }
+
+    /* Adjust Modals for mobile */
+    .modal-content {
+        width: 95% !important;
+        padding: 1.5rem !important;
+    }
+}
+
+/* Custom Scrollbar for the horizontal nav */
+.sidebar-nav::-webkit-scrollbar {
+    height: 4px;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
