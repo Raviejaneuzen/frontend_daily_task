@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+const rawUrl = import.meta.env.VITE_API_URL || 'https://backend-daily-task.onrender.com';
+
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'https://backend-daily-task.onrender.com',
+  baseURL: rawUrl.replace(/\/+$/, ''),
 });
 
 api.interceptors.request.use((config) => {
