@@ -88,10 +88,9 @@ const AIChatbot = ({ onTaskAdded, currentTasks, currentHabits, currentCredential
         setLoading(true);
 
         try {
-            // Send context so AI knows what "the gym task" or "it" refers to
             const contextStr = `
-                Current Tasks: ${currentTasks.map(t => `${t.title} (${t.category})`).join(', ')}
-                Current Habits: ${currentHabits.map(h => h.title).join(', ')}
+                Current Tasks: ${currentTasks ? currentTasks.map(t => `${t.title} (${t.category})`).join(', ') : 'None'}
+                Current Habits: ${currentHabits ? currentHabits.map(h => h.title).join(', ') : 'None'}
                 Current Credentials: ${currentCredentials ? currentCredentials.map(c => c.service_name).join(', ') : 'None'}
             `;
 
